@@ -9,8 +9,8 @@ module.exports = function (app,mongoose) {
          app.db.models.basicSchema(
                 {    "userFullName":req.body.userFullName,
                      "userEmail":req.body.userEmail,
-                     "userPassword":req.body.userPassword,
-                     "userStatus":req.body.userStatus
+                     "userPassword":req.body.userPassword
+                     /*"userStatus":req.body.userStatus*/
                 }).save( function( err)
         { if(!err){
             console.log("Saved new user in database")

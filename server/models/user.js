@@ -8,7 +8,7 @@ module.exports = function (app, mongoose) {
         userFullName: {type: String, required:true},
         userEmail: {type: String, unique:1, required:true},
         userPassword: {type: String, required:true},
-        userStatus: {type: String, required:true}
+     /*   userStatus: {type: String, required:true}*/
     });
 
     app.db.model('basicSchema', userSchema);
