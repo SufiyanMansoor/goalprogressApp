@@ -11,11 +11,11 @@ var http         = require('http');
 var passportHttp=require('passport-http');
 var passport = require('passport')
     ,LocalStrategy=require('passport-local').Strategy;
-
+var cors                = require('cors');
 
 var port = process.env.PORT || '3000';
 var app = express();
-
+app.use( cors() );
 app.use(logger('dev'));
 app.use(express.static(path.resolve(__dirname, '../public/app/')));
 app.use(bodyParser.urlencoded({extended: false}));

@@ -28,7 +28,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         controller:'showGoalController',
         templateUrl:'templates/showGoal.html'
       })
-    $urlRouterProvider.otherwise('/showGoal');
+    $urlRouterProvider.otherwise('/profile');
 
   })
 .run(function($ionicPlatform) {
