@@ -14,5 +14,12 @@ module.exports = function (app, mongoose) {
     app.db.model('basicSchema', userSchema);
 
 
+    var goalSchema=new mongoose.Schema({
+        day:{type:String, required:true},
+        userGoal:{type:String, required:true},
+        userDescription:{type:String, required:true}
+    })
+
+    app.db.model('userGoalSchema',goalSchema)
 
 }

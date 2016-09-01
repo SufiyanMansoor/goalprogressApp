@@ -23,8 +23,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         controller:'profileController',
         templateUrl:'templates/profile.html'
       })
-
-    $urlRouterProvider.otherwise('/login');
+      .state('showGoal', {
+        url: '/showGoal',
+        controller:'showGoalController',
+        templateUrl:'templates/showGoal.html'
+      })
+    $urlRouterProvider.otherwise('/showGoal');
 
   })
 .run(function($ionicPlatform) {

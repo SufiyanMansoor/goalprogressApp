@@ -1,7 +1,22 @@
 <ion-view view-title="Users Profile" >
   <ion-content class="has-header">
-
-
+    <div class="list">
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Day</span>
+        <input type="text" placeholder="Enter A Day" ng-model="user.day">
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Goal </span>
+        <input type="text" placeholder="Add Your Goal" ng-model="user.Goal">
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Description</span>
+        <input type="text" placeholder="Add Your Dscription" ng-model="user.Description">
+      </label>
+    </div>
+    <button class="button button-block button-calm" ng-click="submitGoal(user)">
+      Submit Your Goals
+    </button>
 
 
 

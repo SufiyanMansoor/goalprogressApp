@@ -26,17 +26,35 @@ module.exports = function (app,mongoose) {
     res.send("Hello Its sign  up")
     };
     app.api.User.login = function (req, res, next) {
-        res.send("hello its signup")
+        res.send("hello its login")
 
     };
-    app.api.User.logout = function (req, res, next) {
-        res.send("hello its signup")
+
+
+    app.api.User.showgoal = function (req, res, next) {
+        res.send("hello its show goal")
 
     }
     app.api.User.profile = function (req, res, next) {
-        res.send("hello its signup")
+        app.db.models.userGoalSchema(
+            {    "day":req.body.day,
+                "userGoal":req.body.userGoal,
+                "userDescription":req.body.userDescription
+                /*"userStatus":req.body.userStatus*/
+            }).save( function( err)
+            { if(!err){
+                console.log("Saved Your Goal In Database")
+            }
+            else{
+                console.log("its error because your parameter is not saved")
+                console.log(err)
 
-    }
+            }
+            }
+
+        );
+        res.send("Hello Its saved your goal in data base")
+    };
 
 
 

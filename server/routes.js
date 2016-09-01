@@ -15,9 +15,9 @@ module.exports = function (app, mongoose) {
     app.post('/signup', app.api.User.signup);
     app.post('/login ', app.api.User.login);
 
-    app.get('/logout', app.api.User.logout);
+    app.get('/showgoal', app.api.User.showgoal);
 
-    app.post('/profile', app.api.User.profile);
+        app.post('/profile', app.api.User.profile);
 
 
 
