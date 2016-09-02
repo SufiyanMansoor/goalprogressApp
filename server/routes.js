@@ -19,7 +19,7 @@ module.exports = function (app, mongoose,passport,LocalStrategy) {
             failureFlash: true }));
     /*app.post('/signin', app.api.User.signin);*/
 
-    app.get('/showgoal', app.api.User.showgoal);
+    app.post('/showgoal', app.api.User.showgoal);
 
     app.post('/profile', app.api.User.profile);
 

@@ -18,6 +18,8 @@ module.exports = function (app, mongoose,passport,LocalStrategy) {
         day:{type:String, required:true},
         userGoal:{type:String, required:true},
         userDescription:{type:String, required:true}
+
+
     })
 
     app.db.model('userGoalSchema',goalSchema)

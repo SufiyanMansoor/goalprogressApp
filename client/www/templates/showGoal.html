@@ -1,10 +1,18 @@
 <ion-view view-title="Your Goals" >
   <ion-content class="has-header">
-
-
-
+    <div >
+      <ion-list style="">
+        <ion-item  class="item-icon-right item item-text-wrap item-thumbnail-left" ng-repeat="user in users">
+          <img ng-src="{{ user.image }}">
+          <h2>{{ user.fname }} {{ user.lname }}</h2>
+          <h4>Role : {{ user.jobtitle }}</h4>
+          <h4>Username : {{ user.username }}</h4><i class="button-icon icon ion-ios-arrow-forward"></i>
+        </ion-item>
+      </ion-list>
+    </div>
 
 
 
 
   </ion-content>
+</ion-view>
