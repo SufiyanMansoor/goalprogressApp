@@ -17,6 +17,12 @@
     <button class="button button-block button-calm" ng-click="submitGoal(user)">
       Submit Your Goals
     </button>
+    <tr ng-repeat-start="user in data">
+      <td><strong>{{user.day}}</strong></td>
+    </tr>
+    <tr ng-repeat-end>
+      <td>{{user.Description}}</td>
+    </tr>
 
 
 
