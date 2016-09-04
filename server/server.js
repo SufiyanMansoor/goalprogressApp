@@ -8,9 +8,6 @@ var express      = require('express');
 var logger       = require('morgan');
 var path         = require('path');
 var http         = require('http');
-var passportHttp=require('passport-http');
-var passport = require('passport')
-    ,LocalStrategy=require('passport-local').Strategy;
 var cors                = require('cors');
 
 var port = process.env.PORT || '3000';
@@ -26,10 +23,10 @@ app.use(cookieParser());
 //require('./models')(app, bearer, moment, mongoose);
 
 //************ Mongodb *********
-require('./config')(app,mongoose,passport,LocalStrategy);
-require('./models')(app,mongoose,passport,LocalStrategy);
-require('./controllers')(app, mongoose,passport,LocalStrategy);
-require('./routes.js')(app, mongoose,passport,LocalStrategy);
+require('./config')(app,mongoose);
+require('./models')(app,mongoose);
+require('./controllers')(app, mongoose);
+require('./routes.js')(app, mongoose);
 
 
 

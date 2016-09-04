@@ -1,7 +1,7 @@
 /**
  * Created by Sufiyan on 8/31/2016.
  */
-module.exports = function (app,mongoose,passport,LocalStrategy) {
+module.exports = function (app,mongoose) {
     app.api.User = {};
 
 
@@ -31,29 +31,7 @@ module.exports = function (app,mongoose,passport,LocalStrategy) {
 
     };*/
     app.api.User.login = function (req, res, next) {
-        passport.use(new LocalStrategy(
-            function(userEmail, userPassword, done) {
-                app.db.models.findOne({ userEmail: userEmail }, function(err, user) {
-                    if (err) { return done(err); }
-                    if (!user) {
-                        return done(null, false, { message: 'Incorrect username.' });
-                    }
-                    if (!user.userPassword(userPassword)) {
-                        return done(null, false, { message: 'Incorrect password.' });
-                    }
-                    return done(null, user);
-
-
-
-
-
-                });
-                res.send("Hello its Login")
-            }
-
-        ));
-
-
+        res.send('helllo its login')
     };
 
 

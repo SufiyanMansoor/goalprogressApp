@@ -1,7 +1,7 @@
 /**
  * Created by Sufiyan on 8/31/2016.
  */
-module.exports = function (app, mongoose,passport) {
+module.exports = function (app, mongoose) {
 // mongodb://bearertest:bearertest@ds017258.mlab.com:17258/bearertest
 // mongodb://bearer:bearer@ds011168.mlab.com:11168/bearer
     var config = {

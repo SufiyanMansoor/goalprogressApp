@@ -2,7 +2,7 @@
  * Created by Sufiyan on 8/31/2016.
  */
 
-exports = module.exports = function(app, mongoose,passport,LocalStrategy) {
+exports = module.exports = function(app, mongoose) {
 
     mongoose.connect(app.config.mongodbURL);
     app.db = mongoose.connection;

@@ -1,7 +1,7 @@
 /**
  * Created by Sufiyan on 8/31/2016.
  */
-module.exports = function (app, mongoose,passport,LocalStrategy) {
+module.exports = function (app, mongoose) {
 
 
     /**
@@ -13,10 +13,7 @@ module.exports = function (app, mongoose,passport,LocalStrategy) {
     });
 
     app.post('/signup', app.api.User.signup);
-    app.post('/login',app.api.User.login,
-        passport.authenticate('local', { successRedirect: '/',
-            failureRedirect: '/login',
-            failureFlash: true }));
+    app.post('/login',app.api.User.login);
     /*app.post('/signin', app.api.User.signin);*/
 
     app.post('/showgoal', app.api.User.showgoal);
