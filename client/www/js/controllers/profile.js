@@ -2,7 +2,7 @@
  * Created by User on 8/31/2016.
  */
 angular.module('starter.controllers')
-  .controller('profileController',function($scope,profileService, $state,$http){
+  .controller('profileController',function($scope,profileService, $state,IssuesService){
     $scope.submitGoal = function (user) {
       var data = {
         day: user.day,
@@ -10,6 +10,11 @@ angular.module('starter.controllers')
         userDescription: user.Description
       }
       console.log(data)
+        $scope.issues = [];
+        IssuesService.all().then(function(data){
+            $scope.issues = data;
+        })
+
       profileService.profilein(data).then(function (response) {
           if (response) {
             $state.go('showGoal');
