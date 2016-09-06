@@ -34,7 +34,18 @@ module.exports = function (app,mongoose) {
         res.send('helllo its login')
     };
 
+    app.api.User.deletegoal= function (req, res, next) {
+        app.db.models.userGoalSchema.remove({ _id: req.body.id } , function (err){
+            if (!err){
+                res.send('its delete goal'+req.body.id);
+            }
+            else{
+                res.send('not deleted')
+            }
+        });
 
+
+    }
     app.api.User.showgoal = function (req, res, next) {
         app.db.models.userGoalSchema.find({}, function(err, users) {
             if(!err){

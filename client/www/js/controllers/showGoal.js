@@ -4,8 +4,10 @@
 angular.module('starter')
   .controller('showGoalController', function ($scope, $http,IssuesService) {
     $scope.delete=function(id){
-      $http.delete('http://localhost:3000/deletegoal').then(function(resp) {
+      $http.post('http://localhost:3000/deletegoal',{id: id}).then(function(resp) {
         console.log('Success', resp);
+
+
       }, function(err) {
         console.error('ERR', err);
 
