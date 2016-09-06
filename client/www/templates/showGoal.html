@@ -7,7 +7,7 @@
         <h2>{{item.day}}</h2>
         <h3>{{item.userGoal}}</h3>
         <p>{{item.userDescription}}</p>
-        <div class="list" ng-show="item.show">
+        <div class="list" ng-show="item.show" >
           <label class="item item-input item-floating-label">
             <span class="input-label">Day</span>
             <input type="text" placeholder="Enter A Day" ng-model="user.day">
@@ -20,7 +20,7 @@
             <span class="input-label">Description</span>
             <input type="text" placeholder="Add Your Dscription" ng-model="user.Description">
           </label>
-          <button class="button button-balanced" ng-click="edit(item._id,user.day,user.Goal,user.Description)" >
+          <button class="button button-balanced" ng-click="edit(item._id,user.day,user.Goal,user.Description);item.show=false" >
             Update
           </button>
         </div>
