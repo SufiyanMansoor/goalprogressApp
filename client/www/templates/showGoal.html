@@ -1,9 +1,12 @@
 <ion-view view-title="Your Goals" >
   <ion-content class="has-header">
     <ion-list>
-      <ion-item ng-repeat="item in issues">
-        Hello, {{item}}!
-      </ion-item>
+
+      <a class="item" href="#" ng-repeat="item in issues">
+        <h2>{{item.day}}</h2>
+        <h3>{{item.userGoal}}</h3>
+        <p>{{item.userDescription}}</p>
+      </a>
     </ion-list>
 
 
