@@ -36,7 +36,11 @@ module.exports = function (app,mongoose) {
 
 
     app.api.User.showgoal = function (req, res, next) {
-        res.send("hello its show goal")
+        app.db.models.userGoalSchema.find({}, function(err, users) {
+            if(!err){
+                res.send(users);
+            }
+        });
 
     }
     app.api.User.profile = function (req, res, next) {

@@ -14,9 +14,7 @@ module.exports = function (app, mongoose) {
     app.post('/login',app.api.User.login);
     /*app.post('/signin', app.api.User.signin);*/
 
-    app.post('/showgoal', function(req,res,next){
-        res.send('hello its checked')
-    });
+    app.post('/showgoal', app.api.User.showgoal);
 
     app.post('/profile', app.api.User.profile);
 
