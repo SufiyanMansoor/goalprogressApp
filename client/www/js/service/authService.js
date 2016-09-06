@@ -4,7 +4,7 @@
 /**
  * Created by User on 8/19/2016.
  */
-angular.module('starter.services')
+angular.module('starter')
   .factory('authService', function ($http, $q, apiURL) {
     return {
       signUp: function (data) {

@@ -1,7 +1,7 @@
 /**
  * Created by User on 9/1/2016.
  */
-angular.module('starter.controllers')
+angular.module('starter')
   .controller('showGoalController', function ($scope, $http,IssuesService) {
       IssuesService.all()
           .then(function(resp) {

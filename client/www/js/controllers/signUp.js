@@ -1,7 +1,7 @@
 /**
  * Created by User on 8/31/2016.
  */
-angular.module('starter.controllers')
+angular.module('starter')
 .controller('signUpController',function($scope, authService, $ionicPopup, $state){
     $scope.signUp = function (user) {
       console.log(user);

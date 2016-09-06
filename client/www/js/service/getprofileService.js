@@ -1,13 +1,12 @@
-
 /**
- * Created by User on 8/19/2016.
+ * Created by User on 9/6/2016.
  */
 angular.module('starter')
-  .factory('profileService', function ($http, $q, apiURL) {
+  .factory('getprofileService', function ($http, $q, apiURL) {
     return {
-      profilein: function (data) {
+      getprofile: function (data) {
         var defer = $q.defer();
-        $http.post(apiURL + "/profile", data)
+        $http.post(apiURL + "/getprofile", data)
           .then(function (response) {
             console.log(response);
             if (response.status == 200) {

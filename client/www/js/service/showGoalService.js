@@ -1,12 +1,12 @@
 /**
  * Created by User on 9/2/2016.
  */
-angular.module('starter.services')
+var APP = angular.module('starter')
     .factory('IssuesService', function($http) {
-        var issues = [];
+
         return {
             all: function() {
-                return $http.get('/showgoal')
+                return $http.post('http://localhost:3000/showgoal')
                     .then(function(data){ // Optional callback inside service
                         issues = data;
                     });
