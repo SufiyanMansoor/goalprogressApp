@@ -2,11 +2,13 @@
   <ion-content class="has-header">
     <ion-list>
 
-      <a class="item" href="#" ng-repeat="item in issues">
+      <a class="item item-icon-right" ng-repeat="item in issues">
         <h2>{{item.day}}</h2>
         <h3>{{item.userGoal}}</h3>
         <p>{{item.userDescription}}</p>
+        <i class="icon ion-trash-b" ng-click="delete(item._id)"></i>
       </a>
+
     </ion-list>
 
 
