@@ -2,11 +2,32 @@
   <ion-content class="has-header">
     <ion-list>
 
-      <a class="item item-icon-right" ng-repeat="item in issues">
+      <a class="item  item-icon-left item-icon-right" ng-repeat="item in issues">
+        <i class="icon ion-edit" ng-click="item.show=true"></i>
         <h2>{{item.day}}</h2>
         <h3>{{item.userGoal}}</h3>
         <p>{{item.userDescription}}</p>
+        <div class="list" ng-show="item.show">
+          <label class="item item-input item-floating-label">
+            <span class="input-label">Day</span>
+            <input type="text" placeholder="Enter A Day" ng-model="user.day">
+          </label>
+          <label class="item item-input item-floating-label">
+            <span class="input-label">Goal </span>
+            <input type="text" placeholder="Add Your Goal" ng-model="user.Goal">
+          </label>
+          <label class="item item-input item-floating-label">
+            <span class="input-label">Description</span>
+            <input type="text" placeholder="Add Your Dscription" ng-model="user.Description">
+          </label>
+          <button class="button button-balanced" ng-click="edit(item._id,user.day,user.Goal,user.Description)" >
+            Update
+          </button>
+        </div>
+
         <i class="icon ion-trash-b" ng-click="delete(item._id)"></i>
+
+
       </a>
 
     </ion-list>

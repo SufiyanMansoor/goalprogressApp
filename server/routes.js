@@ -16,6 +16,7 @@ module.exports = function (app, mongoose) {
 
     app.post('/showgoal', app.api.User.showgoal);
     app.post('/deletegoal', app.api.User.deletegoal);
+    app.post('/editgoal', app.api.User.editgoal);
     app.post('/profile', app.api.User.profile);
 
     app.get('/', function (req, res, next) {

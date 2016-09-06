@@ -13,7 +13,23 @@ angular.module('starter')
 
       });
     }
+    $scope.edit=function(id,day,userGoal,userDescription){
+      $http.post('http://localhost:3000/editgoal',
+        {
+          id: id,
+          day:day,
+          userGoal:userGoal,
+          userDescription:userDescription
+        }
+      ).then(function(resp) {
+        console.log('Success', resp);
 
+
+      }, function(err) {
+        console.error('ERR', err);
+
+      });
+    }
 
 
     IssuesService.all()
