@@ -6,7 +6,7 @@ angular.module('starter')
       IssuesService.all()
           .then(function(resp) {
             console.log('Success', resp);
-            $scope.issues = resp.data;
+            $scope.issues = resp;
           }, function(err) {
             console.error('ERR', err);
             $scope.issues = err;
